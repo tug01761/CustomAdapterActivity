@@ -2,6 +2,7 @@ package temple.edu.customadapteractivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -45,7 +46,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        background.setBackgroundColor(color[position]);
+        Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
+        startActivity(myIntent);
+        //background.setBackgroundColor(color[position]);
         TextView selectedText=  view.findViewById(R.id.colorText);
         selectedText.setBackgroundColor(Color.parseColor("white"));
     }
