@@ -26,14 +26,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Color.parseColor("cyan"),
             Color.parseColor("magenta"),
             Color.parseColor("silver")};
-    View background;
+    //View background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        background = (View) findViewById(R.id.background);
+        //background = (View) findViewById(R.id.background);
 
         Spinner spinner = (Spinner) findViewById(R.id.mySpinner);
         spinner.setOnItemSelectedListener(this);
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
+        myIntent.putExtra("key", position);
         startActivity(myIntent);
         //background.setBackgroundColor(color[position]);
         TextView selectedText=  view.findViewById(R.id.colorText);
