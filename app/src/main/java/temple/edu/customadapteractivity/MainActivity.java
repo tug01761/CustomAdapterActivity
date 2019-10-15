@@ -12,13 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
-    Resources res = getResources();
-    String[] colors = res.getStringArray(R.array.string_color_name);
-
-    //spinner text list
-    String[] text={"White", "Red", "Blue", "Yellow", "Purple", "Gray", "Green", "Cyan", "Magenta", "Silver"};
-
+    
     //color list
     int[] color={Color.parseColor("white"),
             Color.parseColor("red"),
@@ -34,6 +28,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Resources res = getResources();
+        String[] text = res.getStringArray(R.array.color_array);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -42,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         ColorAdapter colorAdapter = new ColorAdapter(getApplicationContext(), text, color);
         spinner.setAdapter(colorAdapter);
-
 
     }
 
