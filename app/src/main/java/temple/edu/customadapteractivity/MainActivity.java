@@ -3,6 +3,7 @@ package temple.edu.customadapteractivity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    Resources res = getResources();
+    String[] colors = res.getStringArray(R.array.string_color_name);
 
     //spinner text list
     String[] text={"White", "Red", "Blue", "Yellow", "Purple", "Gray", "Green", "Cyan", "Magenta", "Silver"};

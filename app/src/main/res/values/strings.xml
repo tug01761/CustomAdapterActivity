@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">CustomAdapterActivity</string>
+    <string-array name="string_color_name">
+        <item>white</item>
+        <item>red</item>
+        <item>blue</item>
+        <item>yellow</item>
+        <item>purple</item>
+        <item>grey</item>
+        <item>green</item>
+        <item>cyan</item>
+        <item>magenta</item>
+        <item>silver</item>
+    </string-array>
+
 </resources>
