@@ -12,7 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    
+
     //color list
     int[] color={Color.parseColor("white"),
             Color.parseColor("red"),
